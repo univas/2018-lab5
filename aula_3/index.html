@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula 2</title>
+        <meta charset="utf-8">
 
+        <style>
+            p  {
+                color: green;
+            }
+        </style>
+
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <body>
+        <h1>Aula 2</h1>
+
+        <table border="1px">
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>1º B</th>
+                    <th>2º B</th>
+                    <th>3º B</th>
+                    <th>4º B</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td rowspan="2">40</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>José</td>
+                    <td colspan="4">10</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <p>Primeiro parágrafo</p>
+            <p>Segundo parágrafo</p>
+        </div>
+
+        <div>
+            <p style="color:blue;" id="informacoes">Terceiro parágrafo</p>
+            <p style="color:blue;">Quarto parágrafo</p>
+        </div>
+        <!-- isto
+            é
+            um comentario
+        -->
+        <form action="cadastrar.php" method="POST">
+            Nome: <input type="text" name="nome" id="usuario" />
+            Idade: <input type="number" name="idade" />
+            E-mail: <input type="email" name="email" />
+            Data de Nascimento: <input type="date" name="data_nascimento" />
+            Cor: <input type="color" name="color" />
+            Senha: <input type="password" name="senha" />
+
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Salvar">
+        </form>
+
+    </body>
+</html>
