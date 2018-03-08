@@ -1,0 +1,22 @@
+h1 {
+    color: blue;
+    background-color: yellow;
+}
+
+div {
+    height: 600px;
+    width: 350px;
+    margin: 100px auto;
+    /*
+    background-color: red;
+    background-image: url('../images/Penguins.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    */
+    background: red url('../images/Penguins.jpg') no-repeat center right;
+}
+
+a {
+    display: block;
+    /*display: inline*/
+}

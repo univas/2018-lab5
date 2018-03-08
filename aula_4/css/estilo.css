@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial';
+    border: 5px solid #ff0000;
+
+    /* essas três linhas são iguais
+       a linha 6
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ff0000;
+    */
+    
+    border-right-width: 15px;
+    border-bottom-color: yellow;
+    border-left-color: green;
+    border-top-width: 1px;
+
+    border-top-style: dotted;
+    border-right-style: dashed;
+    border-bottom-style: ridge;
+    border-left-style: double;
+
+    margin: 1px 5px 10px 15px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+
+    padding: 10px;
+    padding: 2px 4px 6px 8px;
+
+    width: 150px;
+    height: 50px;
+
+    text-align: right;
+
+}
+
+
+p.textBlue {
+    color: blue;
+}
+
+p.textGreen {
+    color: green;
+}
+
+#titulo {
+    color: orange;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+}

@@ -1,0 +1,29 @@
+#top {
+    background-color: blue;
+}
+
+#left {
+    background-color: red;
+    height: 300px;
+    width: 100px;
+    float: left;
+}
+
+#center {
+    background-color: green;
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+
+#right {
+    background-color: pink;
+    height: 300px;
+    width: 100px;
+    float: right;
+}
+
+#bottom {
+    background-color: gray;
+    clear: both;
+}
