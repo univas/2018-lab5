@@ -1,0 +1,49 @@
+h1, h2, .text-blue {
+    color: blue;
+}
+
+a, a:visited, a:active {
+    color: blue;
+}
+
+div:hover {
+    background-color: green;
+}
+
+:checked {
+    width: 50px;
+}
+
+li:first-child {
+    font-style: italic;
+}
+
+li:last-child {
+    font-style: italic;
+    font-weight: bold;
+}
+
+li:nth-child(2) {
+    font-style: italic;
+    color: yellow;
+}
+
+li:after {
+    content: '+';
+}
+
+li:before {
+    content: '*';
+}
+
+input[type="text"] {
+    width: 150px;
+}
+
+input[type="submit"] {
+    background-color:blue;
+}
+
+ul > li > a {
+    font-size: 36px;
+}
