@@ -1,3 +1,0 @@
-Prova
-
-	- Utilizando HTML e CSS fazer uma página assim como a imagem: "prova_1_A.jpg"
