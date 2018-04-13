@@ -34,22 +34,3 @@ function clearInput(inputName) {
     inputName.value = '';
     inputName.focus();
 }
-
-
-/*
-12-04
-Diego Fraga
-2 Bruno
-Rafael
-Franz
-Rangel
-Rafaela
-Sulivan
-Ewerton
-Samuel
-Jonathan
-Diego Nogueira
-Diego Alves
-Ingrid
-
-*/
