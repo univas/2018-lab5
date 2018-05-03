@@ -1,3 +1,5 @@
+var editRowIndex = -1;
+
 start();
 
 function start() {
@@ -15,8 +17,15 @@ function addContact() {
     if (isValidField(inputName) && 
         isValidField(inputCPF) &&
         isValidField(inputEmail)) {
-        createContact(inputName, inputCPF, inputEmail);
+
+        if (editRowIndex == -1) {
+            createContact(inputName, inputCPF, inputEmail);
+        } else {
+            updateContact(inputName, inputCPF, inputEmail);
+        }
+        
         clearFields(inputName, inputCPF, inputEmail);
+        editRowIndex = -1;
     } else {
         alert('Preencha todos os campos!');
     }
@@ -49,7 +58,8 @@ function createContact(inputName, inputCPF, inputEmail) {
     tr.appendChild(tdExcluir);
 
     var table = document.getElementById('tableItems');
-    table.appendChild(tr);
+    var tbody = table.tBodies[0];
+    tbody.appendChild(tr);
 }
 
 function createButtonElement(value) {
@@ -78,15 +88,21 @@ function clearFields(inputName, inputCPF, inputEmail) {
 }
 
 function deleteContact() {
-    var td = this.parentNode;
-    var tr = td.parentNode;
-    var table = document.getElementById('tableItems');
-    table.removeChild(tr);
+    if (editRowIndex != -1) {
+        alert('Você está no modo edição!');
+    } else {
+        var td = this.parentNode;
+        var tr = td.parentNode;
+        var table = document.getElementById('tableItems');
+        var tbody = table.tBodies[0];
+        tbody.removeChild(tr);
+    }
 }
 
 function editContact() {
     var td = this.parentNode;
     var tr = td.parentNode;
+    editRowIndex = tr.rowIndex;
 
     var tableDatas = tr.childNodes;
     var inputName = document.getElementById('name');
@@ -96,4 +112,14 @@ function editContact() {
     inputName.value = tableDatas[0].innerHTML;
     inputCPF.value = tableDatas[1].innerHTML;
     inputEmail.value = tableDatas[2].innerHTML;
+}
+
+function updateContact(inputName, inputCPF, inputEmail) {
+    var myTable = document.getElementById('tableItems');
+    var tbody = myTable.tBodies[0];
+    var tr = tbody.children[editRowIndex];
+
+    tr.childNodes[0].innerHTML = inputName.value;
+    tr.childNodes[1].innerHTML = inputCPF.value;
+    tr.childNodes[2].innerHTML = inputEmail.value;
 }
