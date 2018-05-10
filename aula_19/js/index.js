@@ -37,17 +37,3 @@ function moveImage() {
     image.style.marginLeft = currentMarging + 'px';
 
 }
-
-/*
-Jonathan
-3 Diego (Nogueira não veio)
-Sulivan
-Everton
-2 Bruno
-Ingrid
-Franz
-Daniel
-Rangel
-Samuel
-Julio
-*/
