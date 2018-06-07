@@ -1,22 +1,12 @@
 var students = [];
 
+loadDataFromLocalStorage();
 saveButtonEvent();
 
 function saveButtonEvent() {
     var saveButton = document.getElementById('save');
     saveButton.onclick = function() {
         saveStudent();
-
-        localStorage.setItem("nome", 
-        document.getElementById('name').value);
-
-        
-        localStorage.setItem("email", 
-        document.getElementById('email').value);
-
-        
-        localStorage.setItem("telefone", 
-        document.getElementById('phone').value);
     };
 }
 
@@ -33,7 +23,8 @@ function saveStudent() {
 
     students.push(student);
     clearTable();
-    populateTable();    
+    populateTable();
+    saveLocalStorage(); 
 }
 
 function clearTable() {
@@ -65,5 +56,18 @@ function populateTable() {
         tr.appendChild(tdPhone);
 
         table.tBodies[0].appendChild(tr);
+    }
+}
+
+function saveLocalStorage() {
+    var data = JSON.stringify(students);
+    localStorage.setItem("estudantes", data);
+}
+
+function loadDataFromLocalStorage() {
+    var studentsSaved = localStorage.getItem("estudantes");
+    if (studentsSaved) {
+        students = JSON.parse(studentsSaved);
+        populateTable();
     }
 }
