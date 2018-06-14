@@ -1,0 +1,36 @@
+* {
+    border: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.input {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+p {
+    text-align: right;
+}
+
+span {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+}
